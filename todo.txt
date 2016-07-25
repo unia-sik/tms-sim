@@ -1,0 +1,49 @@
+$Id: todo.txt 1440 2016-07-25 10:54:37Z klugeflo $
+
+Todo:
+=====
+- Implement new serialisation (see devdoc/serialisation.txt)
+
+- Revision of task set generators (see devdoc/generator.txt)
+
+- Move math functions to Utils classes (gcd, lcm,...)
+
+- return values vs. return parameters!
+  - Scheduler::schedule, Scheduler::dispatch: multiprocessor might
+    return multiple jobs!
+  - return value: success/error codes
+  - return parameters: tasks, jobs, data (?)
+
+- logging no longer global -- introduce logger objects
+  -> write execution logs to dedicated files
+
+- multiprocessor possible? Could be implemented in Scheduler (S. as
+  global scheduler, may have sub-schedulers)
+  -> try with global EDF
+  - How to configure such a system?
+
+- Design for distributed simulations (more parallelism):
+  - Class hierarchy
+  - Objects
+  - Which data?!
+
+- Redesign of class hierarchy (see devdoc/redesign.txt)
+
+- store generated Jobs also at task, e.g. to ensure that task has at
+  most one job active at any time
+
+- nice output of program options:
+  http://www.radmangames.com/programming/how-to-use-boost-program_options
+
+- move headers to separate include directory (to be installed later)
+
+- create shared libraries [partially done]
+
+- Speed up visualisation - only draw relevant part
+
+- Integrate simulation into visualisation
+
+- multithreading: if multiple schedulers are used, run each in a
+  different thread (in tms-sim)
+  [check whether this makes sense!]
+  [needs logger objects!]

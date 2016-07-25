@@ -1,0 +1,45 @@
+# $Id: README 1437 2016-07-15 12:45:19Z klugeflo $
+
+Requirements
+============
+The following packages must be installed:
+>=sys-devel/gcc-4.7
+>=dev-util/cmake-2.8.12
+dev-libs/libxml2
+dev-libs/boost
+Multithreading support must be available for mkevals.
+
+If you want to build the API documentation, additionally the following
+packages are required:
+app-doc/doxygen
+
+If you want to build the Qt GUI (tms-vis), additionally the Qt4 libraries
+must be installed.
+
+
+Installation
+============
+
+$ cd build
+$ ../build-local.sh ..
+$ make
+$ make install
+
+Installs all binaries to build/bin
+
+If you like to perform a system-wide installation, you can simply used
+'cmake' instead of 'build-local.sh'. Currently, we recommend to
+perform only a local (non system-wide) installation.
+
+If you want tms-vis also to be built, pass "-DBUILD_GUI=1" to build-local.sh.
+Beware that the tms-vis is providing only very basic functionality so far!
+
+
+References
+==========
+
+If you are using tms-sim in your scientific work, please cite it as:
+
+Florian Kluge, "tms-sim – Timing Models Scheduling Simulation Framework
+ – Release 2016-07". Technical Report 2016-04, Department of Computer
+Science, University of Augsburg, July 2016.

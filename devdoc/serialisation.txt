@@ -1,0 +1,32 @@
+$Id: serialisation.txt 1439 2016-07-25 09:05:50Z klugeflo $
+
+Revision of Task Serialisation
+==============================
+
+Current state:
+- XML schema needs to be extended for each new task model
+- Serialisation and deserialisation split in two parts:
+  * Serialisation in task class
+  * Deserialisation via Factory and Builder
+
+Proposal for new serialisation: Define more general XML schema!
+- Key-value map as abstract interface
+- Support basic data types (int, string,...)
+- Should also be able to store complex objects (i.e. key ->
+  key-value-map)
+- Both de-/serialisation implemented in relevant class via put/get
+  operators
+- Subclass implementation of de-/serialise methods must first call
+  superclass method
+
+Advantages:
+- Schema can stay unchanged
+- Any class can be de-/serialisable
+- De-/serialisation performed in the "right place", i.e. the class
+  itself, no need for builder classes (Factory must be kept!)
+
+Disadvantages:
+- XML less readable
+
+Alternative:
+- Evaluate Boost serialisation framework

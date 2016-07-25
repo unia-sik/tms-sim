@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Hier kommen die Tasks-->
+<taskset xmlns="http://www.tmsxmlns.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tmsxmlns.com taskset.xsd">
+
+  <periodictask>
+    <id>1</id>
+    <executiontime>4</executiontime>
+    <criticaltime>4</criticaltime>
+    <ucfirmrt/>
+    <uamean/>
+    <priority>1</priority>
+    <period>7</period>
+    <offset>1</offset>
+  </periodictask>
+
+
+  <periodictask>
+    <id>2</id>
+    <executiontime>3</executiontime>
+    <criticaltime>3</criticaltime>
+    <ucfirmrt/>
+    <uamean/>
+    <priority>1</priority>
+    <period>16</period>
+    <offset>1</offset>
+  </periodictask>
+
+
+  <periodictask>
+    <id>3</id>
+    <executiontime>4</executiontime>
+    <criticaltime>4</criticaltime>
+    <ucfirmrt/>
+    <uamean/>
+    <priority>1</priority>
+    <period>16</period>
+    <offset>1</offset>
+  </periodictask>
+
+
+  <periodictask>
+    <id>4</id>
+    <executiontime>2</executiontime>
+    <criticaltime>2</criticaltime>
+    <ucfirmrt/>
+    <uamean/>
+    <priority>1</priority>
+    <period>13</period>
+    <offset>1</offset>
+  </periodictask>
+
+
+  <periodictask>
+    <id>5</id>
+    <executiontime>5</executiontime>
+    <criticaltime>5</criticaltime>
+    <ucfirmrt/>
+    <uamean/>
+    <priority>1</priority>
+    <period>2</period>
+    <offset>1</offset>
+  </periodictask>
+
+
+  <periodictask>
+    <id>6</id>
+    <executiontime>3</executiontime>
+    <criticaltime>3</criticaltime>
+    <ucfirmrt/>
+    <uamean/>
+    <priority>1</priority>
+    <period>8</period>
+    <offset>1</offset>
+  </periodictask>
+
+
+  <periodictask>
+    <id>7</id>
+    <executiontime>1</executiontime>
+    <criticaltime>1</criticaltime>
+    <ucfirmrt/>
+    <uamean/>
+    <priority>1</priority>
+    <period>20</period>
+    <offset>1</offset>
+  </periodictask>
+
+
+  <periodictask>
+    <id>8</id>
+    <executiontime>4</executiontime>
+    <criticaltime>4</criticaltime>
+    <ucfirmrt/>
+    <uamean/>
+    <priority>1</priority>
+    <period>7</period>
+    <offset>1</offset>
+  </periodictask>
+
+
+  <periodictask>
+    <id>9</id>
+    <executiontime>1</executiontime>
+    <criticaltime>1</criticaltime>
+    <ucfirmrt/>
+    <uamean/>
+    <priority>1</priority>
+    <period>7</period>
+    <offset>1</offset>
+  </periodictask>
+
+
+  <periodictask>
+    <id>10</id>
+    <executiontime>3</executiontime>
+    <criticaltime>3</criticaltime>
+    <ucfirmrt/>
+    <uamean/>
+    <priority>1</priority>
+    <period>17</period>
+    <offset>1</offset>
+  </periodictask>
+
+
+  <sporadictask>
+    <id>11</id>
+    <executiontime>2</executiontime>
+    <criticaltime>9</criticaltime>
+    <ucfirmrt/>
+    <uamean/>
+    <priority>1</priority>
+    <minperiod>9</minperiod>
+    <seed>0x3e8</seed>
+    <probability>0.5</probability>
+    <offset>0</offset>
+  </sporadictask>
+
+
+  <sporadictask>
+    <id>12</id>
+    <executiontime>3</executiontime>
+    <criticaltime>10</criticaltime>
+    <ucfirmrt/>
+    <uamean/>
+    <priority>1</priority>
+    <minperiod>10</minperiod>
+    <seed>0x3e8</seed>
+    <probability>0.5</probability>
+    <offset>0</offset>
+  </sporadictask>
+
+
+  <sporadictask>
+    <id>13</id>
+    <executiontime>3</executiontime>
+    <criticaltime>11</criticaltime>
+    <ucfirmrt/>
+    <uamean/>
+    <priority>1</priority>
+    <minperiod>11</minperiod>
+    <seed>0x3e8</seed>
+    <probability>0.5</probability>
+    <offset>0</offset>
+  </sporadictask>
+
+
+  <sporadictask>
+    <id>14</id>
+    <executiontime>3</executiontime>
+    <criticaltime>4</criticaltime>
+    <ucfirmrt/>
+    <uamean/>
+    <priority>1</priority>
+    <minperiod>4</minperiod>
+    <seed>0x3e8</seed>
+    <probability>0.5</probability>
+    <offset>0</offset>
+  </sporadictask>
+
+
+  <sporadictask>
+    <id>15</id>
+    <executiontime>3</executiontime>
+    <criticaltime>16</criticaltime>
+    <ucfirmrt/>
+    <uamean/>
+    <priority>1</priority>
+    <minperiod>16</minperiod>
+    <seed>0x3e8</seed>
+    <probability>0.5</probability>
+    <offset>0</offset>
+  </sporadictask>
+
+</taskset>

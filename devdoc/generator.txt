@@ -1,0 +1,67 @@
+$Id: generator.txt 1439 2016-07-25 09:05:50Z klugeflo $
+
+Existing Task Set Generators
+============================
+
+generator/generator.cpp
+	Generates a random task set with 10 periodic and 5 sporadic
+	tasks, and writes it to XML
+	-> we might remove this one (and the whole directory)
+
+mkeval/mkgenerator.[h|cpp]
+	Generates random (m,k)-firm real-time task sets from parameter
+	file and with target utilisation. This one is used by the
+	mkeval binary (mkeval/eval.cpp).
+
+mkeval/abstractmktaskset.[h|cpp]
+	Generates a single random (m,k)-firm real-time task set from
+	parameter file. Derives actual task sets for given utilisation
+	values. Is used in search for breakdown utilisations.
+	m values can be lower-bounded by percentage of k.
+
+tseval/tstaskset.[h|cpp]
+	Generates producer/consumer task sets for evaluation of
+	time-synchronous communication.
+	With periodgenerator.[h|cpp] (using Goosens'/Macq's approach for
+	limited hyperperiods) and dependencymatrix.[h|cpp].
+
+
+
+Yet Another Generator for mkevals
+=================================
+
+Aim: harmonic and pseudo-harmonic periods
+-> uses Goossens/Macq approach
+Implemented via abstract Periodgenerator class, passed to AbstractMkTaskset
+
+
+Unification of Task Set Generators
+==================================
+
+Aims:
+- find more general approach
+- Generators from Bini/Buttazzo "Measuring the Performance of
+  Schedulability Tests"
+
+Common tasks:
+- Generation of periods
+- Calculation of actual execution times from execution time weights
+
+Specific tasks:
+- Generation of (m,k) parameters
+- Generation of dependencies
+
+- May also evaluate a single Periodic task set with multiple different
+  additional parameters/properties (e.g. (m,k) constraints)
+
+
+Central aim: Any concrete task set must be reproducable from its seed
+and few other parameters (e.g. utilisation). It may also be
+helpful/necessary to have multiple seeds for a single task set,
+e.g. for different task properties.
+
+
+Concrete Tasks:
+- mkgenerator - replace by AbstractMkTaskset
+- Define AbstractPeriodicTaskset;
+  - make AbstractMkTaskset: private AbstractPeriodicTaskset

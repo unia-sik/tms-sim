@@ -1,0 +1,8 @@
+# $Id: default.econf 1355 2016-02-17 14:43:14Z klugeflo $
+# Default execution configuration
+
+# Allow cancellation of already executing jobs
+execCancellations = 1
+
+# Cancel jobs that cannot keep their deadline (heeding execCancellations)
+dlMissCancellations = 1

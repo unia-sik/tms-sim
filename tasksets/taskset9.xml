@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+
+<!-- 
+// Model overloaded control system with only periodic tasks
+// not much help!
+
+PeriodicTask t9p1(1, 36, 2, 4, new UCAL, new UAGR, 0);
+PeriodicTask t9p2(2, 24, 2, 4, new UCAL, new UAGR, 2);
+PeriodicTask t9p3(3, 12, 2, 4, new UCAL, new UAGR, 6);
+PeriodicTask t9p4(4,  6, 2, 4, new UCAL, new UAGR, 0);
+PeriodicTask t9p5(5, 12, 3, 6, new UCAL, new UAGR, 9);
+PeriodicTask t9p6(6, 12, 1, 3, new UCAL, new UAGR, 1);
+PeriodicTask t9p7(7, 36, 3, 9, new UCAL, new UAGR, 1);
+-->
+
+<taskset
+  xmlns="http://www.tmsxmlns.com"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.tmsxmlns.com taskset.xsd">
+
+  <periodictask>
+    <id>1</id>
+    <executiontime>2</executiontime>
+    <criticaltime>4</criticaltime>
+    <ucfirmrt></ucfirmrt>
+    <uaexp>
+    	<weight>0.5</weight>
+    </uaexp>
+    <priority>0</priority>
+    <period>36</period>
+    <offset>0</offset>
+  </periodictask>
+ 
+  <periodictask>
+    <id>2</id>
+    <executiontime>2</executiontime>
+    <criticaltime>4</criticaltime>
+    <ucfirmrt></ucfirmrt>
+    <uaexp>
+    	<weight>0.5</weight>
+    </uaexp>
+    <priority>2</priority>
+    <period>24</period>
+    <offset>0</offset>
+  </periodictask>
+  
+  <periodictask>
+    <id>3</id>
+    <executiontime>2</executiontime>
+    <criticaltime>4</criticaltime>
+    <ucfirmrt></ucfirmrt>
+    <uaexp>
+    	<weight>0.5</weight>
+    </uaexp>
+    <priority>6</priority>
+    <period>12</period>
+    <offset>0</offset>
+  </periodictask>
+  
+  <periodictask>
+    <id>4</id>
+    <executiontime>2</executiontime>
+    <criticaltime>4</criticaltime>
+    <ucfirmrt></ucfirmrt>
+    <uaexp>
+    	<weight>0.5</weight>
+    </uaexp>
+    <priority>0</priority>
+    <period>6</period>
+    <offset>0</offset>
+  </periodictask>
+  
+  <periodictask>
+    <id>5</id>
+    <executiontime>3</executiontime>
+    <criticaltime>6</criticaltime>
+    <ucfirmrt></ucfirmrt>
+    <uaexp>
+    	<weight>0.5</weight>
+    </uaexp>
+    <priority>9</priority>
+    <period>12</period>
+    <offset>0</offset>
+  </periodictask>
+  
+  <periodictask>
+    <id>6</id>
+    <executiontime>1</executiontime>
+    <criticaltime>3</criticaltime>
+    <ucfirmrt></ucfirmrt>
+    <uaexp>
+    	<weight>0.5</weight>
+    </uaexp>
+    <priority>1</priority>
+    <period>12</period>
+    <offset>0</offset>
+  </periodictask>
+  
+  <periodictask>
+    <id>7</id>
+    <executiontime>3</executiontime>
+    <criticaltime>9</criticaltime>
+    <ucfirmrt></ucfirmrt>
+    <uaexp>
+    	<weight>0.5</weight>
+    </uaexp>
+    <priority>1</priority>
+    <period>36</period>
+    <offset>0</offset>
+  </periodictask>
+  
+</taskset>

@@ -1,0 +1,23 @@
+2014-12: initial release
+
+2016-01: Bugfixes and minor extensions
+- boost::program_options for paramter parsing
+- cleaning eval.cpp
+- bugfix of FPP scheduler (update of deadline monitor)
+- Logger merged, logging options added
+- (m,k)-evaluations: dynamic choice of schedulers (-a $SCHED options)
+- bugfix deadlinemonitor
+- removed unused generator
+- singleton guards
+- new multithreading in mkeval
+- Remove return value from Scheduler::enqueueJob
+- fixed compiler warnings
+- Lots of cleaning up
+- Qt GUI for visualisation of schedules (rum sims with -l SIM -l
+  EXEC), building is optional. Still beta stadium!
+- TmsTime/TmsTimeInterval for all time variables!
+
+
+2016-05: Merge of timed communication stuff (tseval)
+
+2016-06: Merge of extended (m,k)-evals

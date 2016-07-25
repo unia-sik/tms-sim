@@ -1,0 +1,177 @@
+<?xml version="1.0"?>
+
+<!-- Valid after: http://www.w3.org/2001/03/webdata/xsv -->
+
+<xs:schema  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://www.tmsxmlns.com"
+            xmlns="http://www.tmsxmlns.com"
+            elementFormDefault="qualified" >
+
+
+  <xs:complexType name="uaexptype">
+    <xs:sequence>
+      <xs:element name="weight" type="xs:string" default="0.5"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="uawindowtype">
+    <xs:sequence>
+      <xs:element name="size" type="xs:string" default="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="tasksettype">
+    <xs:sequence>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="periodictask" type="periodictasktype" />
+          <xs:element name="sporadictask" type="sporadictasktype" />
+          <xs:element name="mktask" type="mktasktype" />
+          <xs:element name="mkctask" type="mkctasktype" />
+          <xs:element name="dbptask" type="dbptasktype" />
+          <xs:element name="sporadicperiodictask" type="sporadicperiodictasktype" />
+          <xs:element name="pproducertask" type="pproducertasktype" />
+          <xs:element name="pconsumertask" type="pconsumertasktype" />
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+       
+  <xs:complexType name="tasktype">
+    <xs:sequence>
+      <xs:element name="id" type="xs:nonNegativeInteger"/>
+      <xs:element name="executiontime" type="xs:integer"/>
+      <xs:element name="criticaltime" type="xs:integer"/>
+      
+	  <xs:choice>
+		<xs:element name="ucfirmrt" type="xs:string"/>
+	    <xs:element name="ucnone" type="xs:string"/>
+	  </xs:choice>
+	  
+      <xs:choice>
+          <xs:element name="uanone" type="xs:string" />
+          <xs:element name="uaexp" type="uaexptype" />
+          <xs:element name="uamean" type="xs:string" />
+          <xs:element name="uawmean" type="uawindowtype" />
+          <xs:element name="uawmk" type="uawmktype" />
+      </xs:choice>
+      
+      <xs:element name="priority" type="xs:nonNegativeInteger"/>
+      
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="uawmktype">
+    <xs:sequence>
+      <xs:element name="m" type="xs:nonNegativeInteger"/>
+      <xs:element name="k" type="xs:nonNegativeInteger"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="sporadictasktype">
+    <xs:complexContent>
+      <xs:extension base="tasktype">
+        <xs:sequence>
+        
+          <xs:element name="minperiod" type="xs:string"/>
+          <xs:element name="seed" type="xs:string" default="0.5"/>
+          <xs:element name="probability" type="xs:decimal"/>
+          <xs:element name="offset" type="xs:integer" default="0"/>
+        
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:complexType name="periodictasktype">
+    <xs:complexContent>
+      <xs:extension base="tasktype">
+        <xs:sequence>
+           <xs:element name="period" type="xs:integer" />
+           <xs:element name="offset" type="xs:integer" default="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:complexType name="pproducertasktype">
+    <xs:complexContent>
+      <xs:extension base="periodictasktype">
+        <xs:sequence>
+	  <xs:element name="buffersize" type="xs:integer" />
+          <xs:element name="responsetime" type="xs:integer" />
+        
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="producerlisttype">
+    <xs:sequence>
+      <xs:choice minOccurs="1" maxOccurs="unbounded">
+	<xs:element name="producer" type="xs:string" />
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="pconsumertasktype">
+    <xs:complexContent>
+      <xs:extension base="periodictasktype">
+        <xs:sequence>
+       
+          <xs:element name="responsetime" type="xs:integer" />
+	  <xs:element name="producers" type="producerlisttype" minOccurs="0" maxOccurs="1" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:complexType name="mktasktype">
+    <xs:complexContent>
+      <xs:extension base="periodictasktype">
+        <xs:sequence>
+          <xs:element name="m" type="xs:integer" />
+          <xs:element name="k" type="xs:integer" />
+          <xs:element name="spin" type="xs:integer" />
+	  <xs:element name="mkstate" type="xs:string" default="1111111111111111111111111111111111111111111111111111111111111111" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="mkctasktype">
+    <xs:complexContent>
+      <xs:extension base="mktasktype">
+        <xs:sequence>
+        
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="dbptasktype">
+    <xs:complexContent>
+      <xs:extension base="mktasktype">
+        <xs:sequence>
+        
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:complexType name="sporadicperiodictasktype">
+    <xs:complexContent>
+      <xs:extension base="tasktype">
+        <xs:sequence>
+        
+           <xs:element name="period" type="xs:integer" />
+           <xs:element name="offset" type="xs:integer" default="0"/>
+           <xs:element name="seed" type="xs:string" default="0.5"/>
+          <xs:element name="probability" type="xs:decimal"/>
+          
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:element name="taskset" type="tasksettype"/>
+
+</xs:schema>

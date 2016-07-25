@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+
+<!--
+
+(m,k) taskset from Ramanathan 1999
+C1 = 1, T1 = 3, m1 = 1, k1 = 1
+C2 = 2, T2 = 4, m2 = 2, k2 = 3
+C3 = 3, T3 = 12, m3 = 3, k3 = 5
+
+-->
+
+<taskset
+  xmlns="http://www.tmsxmlns.com"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.tmsxmlns.com taskset.xsd">
+
+  <mkftask>
+    <id>1</id>
+    <executiontime>1</executiontime>
+    <criticaltime>3</criticaltime>
+    <ucfirmrt></ucfirmrt>
+    <uaexp>
+    	<weight>0.5</weight>
+    </uaexp>
+    <priority>0</priority>
+    <period>3</period>
+    <offset>0</offset>
+    <m>1</m>
+    <k>1</k>
+  </mkftask>
+  
+  <mkftask>
+    <id>2</id>
+    <executiontime>2</executiontime>
+    <criticaltime>4</criticaltime>
+    <ucfirmrt></ucfirmrt>
+    <uaexp>
+    	<weight>0.5</weight>
+    </uaexp>
+    <priority>1</priority>
+    <period>4</period>
+    <offset>0</offset>
+    <m>2</m>
+    <k>3</k>
+  </mkftask>
+  
+  <mkftask>
+    <id>3</id>
+    <executiontime>3</executiontime>
+    <criticaltime>12</criticaltime>
+    <ucfirmrt></ucfirmrt>
+    <uaexp>
+    	<weight>0.5</weight>
+    </uaexp>
+    <priority>2</priority>
+    <period>12</period>
+    <offset>0</offset>
+    <m>3</m>
+    <k>5</k>
+  </mkftask>
+
+
+</taskset>

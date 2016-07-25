@@ -1,0 +1,12 @@
+# $Id: lp-feas-m-0.8.mkg 1355 2016-02-17 14:43:14Z klugeflo $
+# config file for mkgenerator
+# "very" long periods
+# feasible m parameters (at least 70% of jobs must be successful)
+
+minPeriod = 5
+maxPeriod = 100
+minK = 2
+maxK = 10
+#utilisation = 1.0
+maxWC = 100
+minM = 0.8

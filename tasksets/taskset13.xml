@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+
+<!-- 
+
+good-natured task set with full utilisation through periodic tasks (TS13)
+
+PeriodicTask t13p1(1, 6, 1, 6, new UCAL, new UAGR, 0);
+PeriodicTask t13p2(2, 6, 2, 6, new UCAL, new UAGR, 0);
+PeriodicTask t13p3(3, 6, 3, 6, new UCAL, new UAGR, 0);
+
+SPTask t13sp1(11, 6, 1, 0xcafe600d, 6, new UCAL, new UAGR, 0.33);
+-->
+
+<taskset
+  xmlns="http://www.tmsxmlns.com"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.tmsxmlns.com taskset.xsd">
+
+  <periodictask>
+    <id>1</id>
+    <executiontime>1</executiontime>
+    <criticaltime>6</criticaltime>
+    <ucfirmrt></ucfirmrt>
+    <uaexp>
+    	<weight>0.5</weight>
+    </uaexp>
+    <priority>0</priority>
+    <period>6</period>
+    <offset>0</offset>
+  </periodictask>
+  
+  <periodictask>
+    <id>2</id>
+    <executiontime>2</executiontime>
+    <criticaltime>6</criticaltime>
+    <ucfirmrt></ucfirmrt>
+    <uaexp>
+    	<weight>0.5</weight>
+    </uaexp>
+    <priority>0</priority>
+    <period>6</period>
+    <offset>0</offset>
+  </periodictask>
+  
+  <periodictask>
+    <id>3</id>
+    <executiontime>3</executiontime>
+    <criticaltime>6</criticaltime>
+    <ucfirmrt></ucfirmrt>
+    <uaexp>
+    	<weight>0.5</weight>
+    </uaexp>
+    <priority>0</priority>
+    <period>6</period>
+    <offset>0</offset>
+  </periodictask>
+
+  <sporadicperiodictask>
+    <id>11</id>
+    <executiontime>1</executiontime>
+    <criticaltime>6</criticaltime>
+    <ucfirmrt></ucfirmrt>
+    <uaexp>
+		<weight>0.5</weight>
+    </uaexp>
+    <priority>1</priority>
+    <period>6</period>
+    <offset>0</offset>
+    <seed>0xcafe600d</seed>
+    <probability>0.33</probability>
+  </sporadicperiodictask>
+  
+</taskset>

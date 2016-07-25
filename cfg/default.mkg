@@ -1,0 +1,9 @@
+# $Id: default.mkg 907 2015-04-23 14:24:22Z klugeflo $
+# default config file for mkgenerator
+
+minPeriod = 5
+maxPeriod = 15
+minK = 2
+maxK = 10
+#utilisation = 1.0
+maxWC = 100

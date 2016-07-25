@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+
+<!-- 
+ill-conditioned task set
+
+PeriodicTask t3p0(0, 15, 3, 6, new UCAL, new UAGR);
+PeriodicTask t3p1(1, 57, 8, 13, new UCAL, new UAGR);
+PeriodicTask t3p2(2, 111, 9, 19, new UCAL, new UAGR);
+PeriodicTask t3p3(3, 42, 10, 18, new UCAL, new UAGR);
+PeriodicTask t3p4(4, 37, 5, 19, new UCAL, new UAGR);
+
+SporadicTask t3s0(10, 50, 5, 0x12345678, 10, new UCAL, new UAGR, 0.4);
+SporadicTask t3s1(11, 10, 2, 0x23456789, 5, new UCAL, new UAGR, 0.2);
+SporadicTask t3s2(12, 100, 13, 0x34567890, 20, new UCAL, new UAGR, 0.3);
+
+-->
+
+<taskset
+  xmlns="http://www.tmsxmlns.com"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.tmsxmlns.com taskset.xsd">
+
+  <periodictask>
+    <id>0</id>
+    <executiontime>3</executiontime>
+    <criticaltime>6</criticaltime>
+    <ucfirmrt></ucfirmrt>
+    <uaexp>
+    	<weight>0.5</weight>
+    </uaexp>
+    <priority>1</priority>
+    <period>15</period>
+    <offset>0</offset>
+  </periodictask>
+ 
+  <periodictask>
+    <id>1</id>
+    <executiontime>8</executiontime>
+    <criticaltime>13</criticaltime>
+    <ucfirmrt></ucfirmrt>
+    <uaexp>
+    	<weight>0.5</weight>
+    </uaexp>
+    <priority>1</priority>
+    <period>57</period>
+    <offset>0</offset>
+  </periodictask>
+  
+  <periodictask>
+    <id>2</id>
+    <executiontime>9</executiontime>
+    <criticaltime>19</criticaltime>
+    <ucfirmrt></ucfirmrt>
+    <uaexp>
+    	<weight>0.5</weight>
+    </uaexp>
+    <priority>1</priority>
+    <period>111</period>
+    <offset>0</offset>
+  </periodictask>
+  
+  <periodictask>
+    <id>3</id>
+    <executiontime>10</executiontime>
+    <criticaltime>18</criticaltime>
+    <ucfirmrt></ucfirmrt>
+    <uaexp>
+    	<weight>0.5</weight>
+    </uaexp>
+    <priority>1</priority>
+    <period>42</period>
+    <offset>0</offset>
+  </periodictask>
+  
+  <periodictask>
+    <id>4</id>
+    <executiontime>5</executiontime>
+    <criticaltime>19</criticaltime>
+    <ucfirmrt></ucfirmrt>
+    <uaexp>
+    	<weight>0.5</weight>
+    </uaexp>
+    <priority>1</priority>
+    <period>37</period>
+    <offset>0</offset>
+  </periodictask>
+
+  <sporadictask>
+    <id>10</id>
+    <executiontime>5</executiontime>
+    <criticaltime>10</criticaltime>
+    <ucfirmrt></ucfirmrt>
+    <uaexp>
+		<weight>0.5</weight>
+    </uaexp>
+    <priority>1</priority>
+    <minperiod>50</minperiod>
+    <seed>0x12345678</seed>
+    <probability>0.4</probability>
+    <offset>0</offset>   
+  </sporadictask>
+  
+  <sporadictask>
+    <id>11</id>
+    <executiontime>2</executiontime>
+    <criticaltime>5</criticaltime>
+    <ucfirmrt></ucfirmrt>
+    <uaexp>
+		<weight>0.5</weight>
+    </uaexp>
+    <priority>1</priority>
+    <minperiod>10</minperiod>
+    <seed>0x12345678</seed>
+    <probability>0.2</probability>
+    <offset>0</offset>   
+  </sporadictask>
+  
+  <sporadictask>
+    <id>12</id>
+    <executiontime>13</executiontime>
+    <criticaltime>20</criticaltime>
+    <ucfirmrt></ucfirmrt>
+    <uaexp>
+		<weight>0.5</weight>
+    </uaexp>
+    <priority>1</priority>
+    <minperiod>100</minperiod>
+    <seed>0x12345678</seed>
+    <probability>0.3</probability>
+    <offset>0</offset>   
+  </sporadictask>
+
+</taskset>

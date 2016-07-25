@@ -1,0 +1,13 @@
+$Id: redesign.txt 1440 2016-07-25 10:54:37Z klugeflo $
+
+Wish-list for tms-sim redesign
+==============================
+
+
+- Simulation of multiprocessor schedulers
+
+- Configuration of schedulers, e.g. don't allow to cancel jobs that
+  started execution (this may leave an actual system in an
+  inconsistent state) -- how handle deadline misses?
+  
+

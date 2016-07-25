@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+
+<!-- 
+
+overloaded task set from (m,k)-firm overload paper [ramanathan99pds] (TS11)
+
+PeriodicTask t11p1(1,  3, 1,  3, new UCAL, new UAGR, 0);
+PeriodicTask t11p2(2,  4, 2,  4, new UCAL, new UAGR, 0);
+PeriodicTask t11p3(3, 12, 3, 21, new UCAL, new UAGR, 0);
+-->
+
+<taskset
+  xmlns="http://www.tmsxmlns.com"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.tmsxmlns.com taskset.xsd">
+
+  <periodictask>
+    <id>1</id>
+    <executiontime>1</executiontime>
+    <criticaltime>3</criticaltime>
+    <ucfirmrt></ucfirmrt>
+    <uaexp>
+    	<weight>0.5</weight>
+    </uaexp>
+    <priority>0</priority>
+    <period>3</period>
+    <offset>0</offset>
+  </periodictask>
+ 
+  <periodictask>
+    <id>2</id>
+    <executiontime>2</executiontime>
+    <criticaltime>4</criticaltime>
+    <ucfirmrt></ucfirmrt>
+    <uaexp>
+    	<weight>0.5</weight>
+    </uaexp>
+    <priority>0</priority>
+    <period>4</period>
+    <offset>0</offset>
+  </periodictask>
+  
+  <periodictask>
+    <id>3</id>
+    <executiontime>3</executiontime>
+    <criticaltime>21</criticaltime>
+    <ucfirmrt></ucfirmrt>
+    <uaexp>
+    	<weight>0.5</weight>
+    </uaexp>
+    <priority>0</priority>
+    <period>12</period>
+    <offset>0</offset>
+  </periodictask> 
+  
+</taskset>
