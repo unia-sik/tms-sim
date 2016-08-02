@@ -65,3 +65,6 @@ Concrete Tasks:
 - mkgenerator - replace by AbstractMkTaskset
 - Define AbstractPeriodicTaskset;
   - make AbstractMkTaskset: private AbstractPeriodicTaskset
+
+Some ideas on the class structure are jotted down in tsgenerator.zargo
+(open with ArgoUML).
