@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<file xmlns="http://www.tmsxmlns.com"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.tmsxmlns.com genericserialisation.xsd">
+  <type>some type</type>
+  <object name="foo"> 
+    
+    <int name="int1">42</int>
+    <int name="int2">43</int>
+    <float name="float1">1.92</float>
+    
+    <object name="bar">
+      <string name="name">yao</string>
+      <int name="id">21</int>
+    </object>
+
+  </object>
+</file>

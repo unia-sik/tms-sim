@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+
+
+<xs:schema  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+targetNamespace="http://www.tmsxmlns.com"
+xmlns="http://www.tmsxmlns.com"
+elementFormDefault="qualified" >
+
+  <xs:complexType name="fileType">
+    <xs:sequence>
+      <xs:element name="type" type="xs:string" />
+      <xs:element name="object" type="objectType"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <!--<xs:element name="object" type="objectType" />-->
+
+
+  <xs:complexType name="objectType">
+    <xs:choice minOccurs="1" maxOccurs="unbounded">
+
+      <xs:element name="int">
+	<xs:complexType>
+	  <xs:simpleContent>
+	    <xs:extension base="xs:int">
+	      <xs:attribute name="name" type="xs:string" use="required" />
+	    </xs:extension>
+	  </xs:simpleContent>
+	</xs:complexType>
+      </xs:element>
+
+      <xs:element name="string">
+	<xs:complexType>
+	  <xs:simpleContent>
+	    <xs:extension base="xs:string">
+	      <xs:attribute name="name" type="xs:string" use="required" />
+	    </xs:extension>
+	  </xs:simpleContent>
+	</xs:complexType>
+      </xs:element>
+
+      <xs:element name="float">
+	<xs:complexType>
+	  <xs:simpleContent>
+	    <xs:extension base="xs:float">
+	      <xs:attribute name="name" type="xs:string" use="required" />
+	    </xs:extension>
+	  </xs:simpleContent>
+	</xs:complexType>
+      </xs:element>
+
+      <xs:element name="object" type="objectType">
+	<!--<xs:complexType>
+	  <xs:complexContent>
+	    <xs:extension base="objectType">
+	      <xs:attribute name="name" type="xs:string" use="required" />
+	    </xs:extension>
+	  </xs:complexContent>
+	</xs:complexType>-->
+      </xs:element>
+
+    </xs:choice>
+    <xs:attribute name="name" type="xs:string" use="required" />
+  </xs:complexType>
+
+  <xs:element name="file" type="fileType" />
+</xs:schema>

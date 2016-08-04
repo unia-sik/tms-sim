@@ -1,4 +1,4 @@
-$Id: serialisation.txt 1439 2016-07-25 09:05:50Z klugeflo $
+$Id: serialisation.txt 1442 2016-08-04 09:14:20Z klugeflo $
 
 Revision of Task Serialisation
 ==============================
@@ -30,3 +30,12 @@ Disadvantages:
 
 Alternative:
 - Evaluate Boost serialisation framework
+
+
+XML/XSD notes:
+- Validate XSD:
+  $ xmllint --noout --dtdvalid http://www.w3.org/2001/XMLSchema.dtd genericserialisation.xsd
+- Validate XML:
+  $ xmllint --schema genericserialisation.xsd ex-serialisation.xml
+
+
