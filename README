@@ -43,3 +43,21 @@ If you are using tms-sim in your scientific work, please cite it as:
 Florian Kluge, "tms-sim – Timing Models Scheduling Simulation Framework
  – Release 2016-07". Technical Report 2016-04, Department of Computer
 Science, University of Augsburg, July 2016.
+
+Further publications related to tms-sim:
+
+Florian Kluge, Markus Neuerburg, Theo Ungerer. Utility-based scheduling of
+(m,k)-Firm Real-Time Task Sets. In 28th GI/ITG International Conference on
+Architecture of Computing Systems (ARCS 2015).
+
+Florian Kluge. tms-sim - Timing Models Scheduling Simulation Framework,
+Release 2014-12. Technical Report 2014-07, Universität Augsburg.
+
+Florian Kluge, Mike Gerdes, Florian Haas, Theo Ungerer. A Generic Timing Model
+for Cyber-Physical Systems. In Workshop on Reconciling Predictability and
+Performance (RePP'14).
+
+Florian Kluge, Florian Haas, Mike Gerdes, Theo Ungerer. History-Cognisant
+Time-Utility-Functions for Scheduling Overloaded Real-Time Control Systems.
+In Proceedings of 7th Junior Researcher Workshop on Real-Time Computing
+(JRWRTC 2013).
