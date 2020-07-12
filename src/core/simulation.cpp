@@ -82,6 +82,25 @@ namespace tmssim {
   {
   }
 
+  SimulationResults& SimulationResults::operator=(const SimulationResults& rhs) {
+    simulatedTime = rhs.simulatedTime;
+    success = rhs.success;
+    activations = rhs.activations;
+    completions = rhs.completions;
+    cancellations = rhs.cancellations;
+    execCancellations = rhs.execCancellations;
+    ecPerformanceLost = rhs.ecPerformanceLost;
+    misses = rhs.misses;
+    preemptions = rhs.preemptions;
+    usum = rhs.usum;
+    esum = rhs.esum;
+    cancelSteps = rhs.cancelSteps;
+    idleSteps = rhs.idleSteps;
+    taskset = rhs.taskset;
+    schedulerId = rhs.schedulerId;
+    return *this;
+  }
+  
 
   std::ostream& operator<< (std::ostream& out, const SimulationResults& stats) {
     out << "Act: " << stats.activations

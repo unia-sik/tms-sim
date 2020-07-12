@@ -54,6 +54,12 @@ namespace tmssim {
     
   TmsTimeElement(const TmsTimeElement& te)
   : tReal(te.tReal), tLogical(te.tLogical) {}
+
+    TmsTimeElement& operator=(const TmsTimeElement& rhs) {
+      tReal = rhs.tReal;
+      tLogical = rhs.tLogical;
+      return *this;
+    }
     
     TmsTime tReal;
     TmsTime tLogical;

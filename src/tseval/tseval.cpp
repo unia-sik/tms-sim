@@ -24,6 +24,7 @@
 #include <thread>
 
 #include <cassert>
+#include <cstring>
 
 using namespace std;
 using namespace tmssim;

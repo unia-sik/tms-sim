@@ -58,6 +58,7 @@ namespace tmssim {
   struct SimulationResults {
     SimulationResults(Taskset* ts = NULL);
     SimulationResults(const SimulationResults& rhs);
+    SimulationResults& operator=(const SimulationResults& rhs);
 
     TmsTime simulatedTime;
     bool success; ///< simulation has run until the end

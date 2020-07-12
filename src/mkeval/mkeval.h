@@ -57,6 +57,13 @@ namespace tmssim {
     MKSimulationResults(const SimulationResults& simStats);
     MKSimulationResults(const MKSimulationResults& rhs);
 
+    MKSimulationResults& operator=(const MKSimulationResults& rhs) {
+      //SimulationResults(rhs);
+      *((SimulationResults*)this) = rhs;
+      mkfail = rhs.mkfail;
+      return *this;
+    }
+    
     /**
      * This value is set to true if the (m,k)-constraint of a task was
      * violated.

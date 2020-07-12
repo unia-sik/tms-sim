@@ -15,6 +15,7 @@
 #include <utils/tlogger.h>
 #include <xmlio/tasksetwriter.h>
 
+#include <cstring>
 
 using namespace std;
 using namespace tmssim;

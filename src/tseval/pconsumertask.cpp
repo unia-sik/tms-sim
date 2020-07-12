@@ -17,6 +17,8 @@
 
 #include <core/globals.h>
 
+#include <cmath>
+
 using namespace std;
 
 namespace tmssim {
